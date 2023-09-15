@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // try {
+        //     console.log(result);
+        // } catch (e) {
+        //     console.log(e.message);
+        // } finally {
+        //     console.log("completed....");
+        // }
+
+        let cars = {
+            modelName: "Freestyle",
+            year: 2019,
+            available() {
+                console.log(`car model is ${this.modelName} manufacturer year is ${this.year}.`);
+            },
+        };
+
+        let sportsCar = {
+            modelName: "Nissan GTR",
+            year: 2022,
+        };
+        cars.available();
+        sportsCar.available = cars.available;
+        sportsCar.available();
+    </script>
+</body>
+
+</html>
